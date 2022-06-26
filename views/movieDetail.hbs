@@ -1,0 +1,29 @@
+<div id="movie-details">
+    <div id='card-extended' class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src={{movieDetail.image}} class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+            <div class="card-body">
+                <a href="/movies">Go back</a>
+                <h5 class="card-title">{{movieDetail.title}}</h5>
+                <h5 class="card-subtitle">Director: {{movieDetail.director}}</h5>
+                <p>Stars</p>
+                <ul>
+                    {{#each movieDetail.stars}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+                <p class="card-text">{{movieDetail.description}}</p>
+                <p>
+                    {{#each movieDetail.showtimes}}
+                        {{this}} | 
+                    {{/each}}
+                </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
